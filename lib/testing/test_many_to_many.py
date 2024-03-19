@@ -97,7 +97,7 @@ def test_author_can_sign_contract():
     author = Author("Name")
     book = Book("Title")
 
-    contract = author.sign_contract(book, "01/01/2001", 60000)
+    contract = author.sign_contract("01/01/2001", book, 60000)
 
     assert isinstance(contract, Contract)
     assert contract.author == author
